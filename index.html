@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I'm Sorry ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<style>
+body{margin:0;font-family:Poppins,sans-serif;background:linear-gradient(#071126,#1b2745,#2b1055);color:#fff;overflow-x:hidden}
+#stars{position:fixed;inset:0;background:
+radial-gradient(2px 2px at 20% 30%,#fff,transparent),
+radial-gradient(2px 2px at 70% 60%,#fff,transparent),
+radial-gradient(1px 1px at 50% 20%,#fff,transparent),
+radial-gradient(2px 2px at 80% 10%,#fff,transparent),
+radial-gradient(1px 1px at 10% 80%,#fff,transparent);}
+.moon{position:fixed;top:40px;right:40px;width:90px;height:90px;border-radius:50%;background:#fff7c2;box-shadow:0 0 40px #fff}
+.sec{max-width:800px;margin:auto;padding:80px 20px;text-align:center;position:relative}
+h1{font-family:Pacifico;font-size:56px;color:#ff9ac3}button{padding:12px 22px;border:0;border-radius:30px;background:#ff4f88;color:#fff;margin:8px;cursor:pointer}
+.card{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);padding:20px;border-radius:20px;margin:25px 0}
+.float{position:fixed;top:-20px;animation:fall linear forwards}
+.envelope{width:220px;height:140px;background:#f7b5c9;margin:20px auto;position:relative;cursor:pointer}
+.envelope:before{content:"";position:absolute;border-left:110px solid transparent;border-right:110px solid transparent;border-top:70px solid #f090b2;width:0;height:0}
+#letter{display:none;background:#fff;color:#333;padding:20px;border-radius:15px;margin-top:20px}
+</style></head><body>
+<div id=stars></div><div class=moon></div>
+<div class=sec>
+<h1>I'm Sorry ❤️</h1>
+<p>I made mistakes, but my feelings for you were always real. Please keep scrolling...</p>
+<button onclick="blast()">A Little Surprise 🎉</button>
+
+<div class=card><h2>Question 1 🥺</h2><p>Will you hear me out?</p>
+<button onclick="ans('Thank you ❤️')">Yes</button><button onclick="ans('I will wait patiently ❤️')">Maybe</button><p id=a></p></div>
+
+<div class=card><h2>Question 2 💕</h2><p>What should we do?</p>
+<button onclick="ans2('Make new memories together ✨')">Make New Memories</button>
+<button onclick="ans2('Talk everything out 💌')">Talk</button><p id=b></p></div>
+
+<div class=envelope onclick="openLetter()"></div>
+<div id=letter><h2>💌 My Letter</h2><p>I'm truly sorry. If I could undo the pain I caused, I would. Thank you for every smile, every memory, and every moment. I don't expect everything to be fixed instantly, but I hope this is the first step toward healing. No matter what, you'll always be special to me. ❤️</p></div>
+
+<div class=card><h2>One Last Question...</h2>
+<p>Will you forgive me?</p>
+<button onclick="yes()">Yes ❤️</button>
+<button id=no>No 😤</button></div>
+</div>
+<script>
+function blast(){confetti({particleCount:180,spread:120});}
+function ans(t){a.innerText=t;blast();}
+function ans2(t){b.innerText=t;blast();}
+function openLetter(){letter.style.display='block';letter.scrollIntoView({behavior:'smooth'});blast();}
+no.onmouseover=()=>{no.style.position='absolute';no.style.left=Math.random()*70+'%';no.style.top=Math.random()*70+'%';}
+function yes(){
+confetti({particleCount:500,spread:360});
+document.body.innerHTML='<div style="height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:#12051d;color:white;text-align:center"><h1 style="font-family:Pacifico;color:#ff8db8;font-size:60px">Thank You ❤️</h1><p style="max-width:700px;font-size:22px">Thank you for giving my apology a chance. I promise to cherish your smile, respect your heart, and keep trying every single day. 🌹💖</p></div>';
+}
+setInterval(()=>{
+let e=document.createElement('div');e.className='float';e.textContent=Math.random()>.5?'🌹':'❤️';
+e.style.left=Math.random()*100+'vw';e.style.fontSize=(18+Math.random()*18)+'px';e.style.animationDuration=(5+Math.random()*5)+'s';
+document.body.appendChild(e);
+e.animate([{transform:'translateY(0)'},{transform:'translateY(110vh)'}],{duration:(5000+Math.random()*5000),fill:'forwards'});
+setTimeout(()=>e.remove(),10000);
+},300);
+</script></body></html>
