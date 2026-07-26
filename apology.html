@@ -1,0 +1,82 @@
+ <!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>For Saqib ❤️</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<style>
+body{margin:0;font-family:Poppins;background:linear-gradient(#08111f,#26153b);color:#fff;overflow-x:hidden}
+.s{max-width:820px;margin:auto;padding:60px 18px;text-align:center}.card{background:rgba(255,255,255,.09);backdrop-filter:blur(12px);border-radius:22px;padding:24px;margin:24px 0}
+h1,h2{font-family:Pacifico;color:#ff9fc8}.moon{position:fixed;right:30px;top:30px;width:90px;height:90px;background:#fff6c4;border-radius:50%;box-shadow:0 0 40px #fff}
+.star{position:fixed;background:#fff;border-radius:50%;animation:tw 2s infinite alternate}.pet{position:fixed;top:-20px;font-size:22px;pointer-events:none}
+button{padding:12px 22px;border:0;border-radius:30px;background:#ff4f88;color:#fff;margin:6px;cursor:pointer}
+#letter{display:none;background:#fff;color:#333;border-radius:18px;padding:20px;text-align:left}
+.env{width:220px;height:140px;background:#f6b4c9;margin:auto;position:relative;cursor:pointer}.env:before{content:'';position:absolute;border-left:110px solid transparent;border-right:110px solid transparent;border-top:70px solid #ec8eb0}
+</style></head><body><div class='moon'></div><div class='s'>
+<h1>To Saqib ❤️</h1>
+<p>Every scroll is another little piece of my heart.</p>
+<div class='card'><h2>Hi Saqib 🥺</h2><p>If this page reached you, it means someone cared enough to build a tiny world just to say <b>I'm sorry</b>. Not because words are enough... but because you're worth every effort.</p></div>
+<div class='card'><h2>Things I Miss 🌹</h2><p>• Your presence.<br>• The comfort of talking to you.<br>• The little moments that made ordinary days feel beautiful.<br>• The smile I hope to see again someday.</p></div>
+<div class="card">
+
+<h2>Do you know how much I miss you?</h2>
+
+<button onclick="miss('little')" class="option">
+A Little 🤏
+</button>
+
+<button onclick="miss('lot')" class="option">
+A Lot ❤️
+</button>
+
+<button onclick="miss('forever')" class="option">
+More Than Words 🥺
+</button>
+
+</div>
+
+<p id="missReply"></p>
+<div class="card">
+
+<h2>If I had one wish...</h2>
+
+<p>What would you choose?</p>
+
+<button onclick="wish()" class="option">
+Another Chance ❤️
+</button>
+
+<button onclick="wish()" class="option">
+A Long Hug 🤗
+</button>
+
+<button onclick="wish()" class="option">
+Go Back In Time ⏳
+</button>
+
+</div>
+
+<p id="wishReply"></p>
+<h2>💖 You Matter</h2>
+
+<p>
+You are someone incredibly special to me.
+Your smile has a way of making ordinary days feel beautiful.
+Hurting someone who means so much to me is something I truly regret.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class='card'><h2>Questions ❤️</h2>
+<p>Can I make you smile again?</p><button onclick="r('I knew there was still hope. 💖')">Yes</button><button onclick="r('Then let me keep trying, one day at a time. 🌹')">Maybe</button><p id='rep'></p>
+<p>Would you read one last letter?</p><button onclick="openL()">Open 💌</button></div>
+<div class='env' onclick='openL()'></div>
+<div id='letter'><h2>Dear Saqib,</h2><p>I don't know if this apology can undo the hurt, but it comes from the deepest part of my heart. If I could erase the moments that caused you pain, I would. Thank you for every memory, every laugh and every lesson. I never wanted our story to be remembered by a mistake. If you're willing, I'd love the chance to write better chapters together. No matter what happens, I sincerely wish happiness always finds you. ❤️</p></div>
+<div class='card'><h2>One Last Question...🥹</h2><p>Will you forgive me?</p><button onclick='yes()'>Yes ❤️</button><button id='no'>No 😤</button></div>
+</div><script>
+for(let i=0;i<80;i++){let s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';let z=1+Math.random()*2;s.style.width=s.style.height=z+'px';document.body.appendChild(s);}
+setInterval(()=>{let p=document.createElement('div');p.className='pet';p.textContent=Math.random()>.5?'🌹':'❤️';p.style.left=Math.random()*100+'vw';document.body.appendChild(p);p.animate([{transform:'translateY(-20px)'},{transform:'translateY(110vh) rotate(360deg)'}],{duration:6000+Math.random()*3000});setTimeout(()=>p.remove(),9000)},250);
+function r(t){rep.innerHTML=t;confetti({particleCount:100,spread:90});}
+function openL(){letter.style.display='block';letter.scrollIntoView({behavior:'smooth'});confetti({particleCount:120,spread:100});}
+no.onmouseover=()=>{no.style.position='absolute';no.style.left=Math.random()*70+'%';no.style.top=Math.random()*70+'%';}
+function yes(){confetti({particleCount:600,spread:360});document.body.innerHTML="<div style='height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#14091d;color:#fff;text-align:center;padding:20px'><h1 style='font-family:Pacifico;color:#ff9fc8'>Thank You, Saqib ❤️</h1><p style='max-width:700px;font-size:22px'>Whether today or someday, thank you for giving my heart a chance to apologise. I hope life always gives you reasons to smile. You'll always be someone special. 🌹💖</p></div>";}
+</script></body></html>
